@@ -8,13 +8,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CMSArticle.ModelsLayer
 {
+    [Table("T_Category")]
     public class Category
     {
+        [Key]
+        [Required]
         public int CategoryId { get; set; }
-
+        [Required]
+        [MaxLength(30)]
         public string Title { get; set; }
         public string ImageName { get; set; }
 
-
+        public Article Article { get; set; }
     }
 }
