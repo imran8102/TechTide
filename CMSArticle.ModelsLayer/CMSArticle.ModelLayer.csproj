@@ -53,13 +53,25 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Article.cs" />
+    <Compile Include="BaseEntity.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="Context\CmsContext.cs" />
     <Compile Include="Comment.cs" />
+    <Compile Include="Migrations\202402260658152_CreateDb.cs" />
+    <Compile Include="Migrations\202402260658152_CreateDb.designer.cs">
+      <DependentUpon>202402260658152_CreateDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202402260658152_CreateDb.resx">
+      <DependentUpon>202402260658152_CreateDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

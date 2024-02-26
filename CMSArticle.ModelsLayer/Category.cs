@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace CMSArticle.ModelsLayer
 {
     [Table("T_Category")]
-    public class Category
+    public class Category:BaseEntity
     {
         [Key]
         [Required]
@@ -19,6 +19,6 @@ namespace CMSArticle.ModelsLayer
         public string Title { get; set; }
         public string ImageName { get; set; }
 
-        public Article Article { get; set; }
+        public IEnumerable<Article> Articles { get; set; }
     }
 }
