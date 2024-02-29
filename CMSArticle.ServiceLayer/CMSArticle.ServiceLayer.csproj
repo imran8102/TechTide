@@ -51,11 +51,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminService.cs" />
+    <Compile Include="ArticleService.cs" />
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="CommentService.cs" />
+    <Compile Include="EntityService.cs" />
+    <Compile Include="IAdminService.cs" />
+    <Compile Include="ICategoryService.cs" />
+    <Compile Include="ICommentService.cs" />
+    <Compile Include="IEntityService.cs" />
+    <Compile Include="IArticleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMSArticle.ModelsLayer\CMSArticle.ModelLayer.csproj">
+      <Project>{7d5906a2-3d7d-4303-a6b0-438210a4e66e}</Project>
+      <Name>CMSArticle.ModelLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMSArticle.RepositoryLayer\CMSArticle.RepositoryLayer.csproj">
+      <Project>{69dc0018-f101-40ad-a06f-9b988123282b}</Project>
+      <Name>CMSArticle.RepositoryLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
