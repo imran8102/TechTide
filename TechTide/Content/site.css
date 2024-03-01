@@ -1,0 +1,12 @@
+﻿
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/vazir-regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/vazir-medium.ttf') format('truetype');
+}
+* {
+    font-family: Vazir;
+}
