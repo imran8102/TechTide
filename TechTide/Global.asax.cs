@@ -17,6 +17,7 @@ namespace TechTide
             RouteConfig.RegisterRoutes(RouteTable.Routes);
              
             BundleConfiguration.RegisterBundle(BundleTable.Bundles);
+            AutoMapperConfig.Configuration();
         }
     }
 }

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TechTide.Views.ViewModels.CategoryViewModel>
+
+@{
+    ViewBag.Title = "لیست دسته بندی ها";
+}
+
+<h2 class="jumbotron text-center mt-3">لیست دسته بندی ها</h2>
+
+<p>
+    @Html.ActionLink("دسته بندی جدید", "Create",null,new {@class = "btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+
+            <img src="~/Images/Category/@item.ImageName" class="img-200x120" />
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id = item.CategoryId }, new { @class = "btn btn-warning" }) |
+            @Html.ActionLink("جزئیات", "Details", new { id = item.CategoryId }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("حذف", "Delete", new { id = item.CategoryId }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
